@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{84D2675E-8F99-4301-976F-560C64D714BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GasPrice.Core.Common</RootNamespace>
+    <AssemblyName>GasPrice.Core.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Omu.ValueInjecter">
+      <HintPath>..\packages\ValueInjecter.3.1.1.2\lib\net40\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppConstants.cs" />
+    <Compile Include="BaseViewModel.cs" />
+    <Compile Include="Enums\DateRange.cs" />
+    <Compile Include="Enums\EventStatus.cs" />
+    <Compile Include="Enums\ExportingFormat.cs" />
+    <Compile Include="Enums\Gender.cs" />
+    <Compile Include="Enums\MobileState.cs" />
+    <Compile Include="Enums\ModelAction.cs" />
+    <Compile Include="Enums\ModelType.cs" />
+    <Compile Include="Enums\NewsletterPeriodicity.cs" />
+    <Compile Include="Enums\oAuthProvider.cs" />
+    <Compile Include="Enums\PropertyCase.cs" />
+    <Compile Include="Extensions\CloneInjection .cs" />
+    <Compile Include="Extensions\DataAnnotationExtension.ValidBirthDate.cs" />
+    <Compile Include="Extensions\DataAnnotationExtension.ValidBoolean.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DictionaryInjection.cs" />
+    <Compile Include="Extensions\DisposableExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\ExpressionExtension.cs" />
+    <Compile Include="Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Extensions\LinqExtensionMethods.cs" />
+    <Compile Include="Extensions\NullableInjection.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\UserExtension.cs" />
+    <Compile Include="Information\IApplicationInformation.cs" />
+    <Compile Include="Infrastructure\ImageHandler\IImageProvider.cs" />
+    <Compile Include="Infrastructure\DataCacheKey.cs" />
+    <Compile Include="Infrastructure\IAppContext.cs" />
+    <Compile Include="Infrastructure\ICrypto.cs" />
+    <Compile Include="Infrastructure\IDataCache.cs" />
+    <Compile Include="Infrastructure\IFtpClient.cs" />
+    <Compile Include="Infrastructure\ILogger.cs" />
+    <Compile Include="Infrastructure\ImageHandler\Image.cs" />
+    <Compile Include="Infrastructure\ImageHandler\ImageList.cs" />
+    <Compile Include="Infrastructure\ImageHandler\ImageResize.cs" />
+    <Compile Include="Infrastructure\ImageHandler\ImageSizeTypeEnum.cs" />
+    <Compile Include="Infrastructure\ImageHandler\ImageThumbnail.cs" />
+    <Compile Include="Infrastructure\ImageHandler\Interfaces\IImageRequest.cs" />
+    <Compile Include="Infrastructure\ImageHandler\Interfaces\IImageResize.cs" />
+    <Compile Include="Infrastructure\ImageHandler\Interfaces\IImageResizeCollection.cs" />
+    <Compile Include="Infrastructure\ImageHandler\Interfaces\IImageSettings.cs" />
+    <Compile Include="Infrastructure\IPdfRender.cs" />
+    <Compile Include="Infrastructure\IRazorTemplateRender.cs" />
+    <Compile Include="Infrastructure\Tracing.cs" />
+    <Compile Include="Messaging\BroadCastEventArgs.cs" />
+    <Compile Include="Messaging\Enums\EventNames.cs" />
+    <Compile Include="Messaging\Enums\MessagingType.cs" />
+    <Compile Include="Messaging\Interfaces\IEmailService.cs" />
+    <Compile Include="Messaging\Interfaces\IMessagingFormatter.cs" />
+    <Compile Include="Messaging\Models\EmailAttachment.cs" />
+    <Compile Include="Messaging\Models\EmailMessage.cs" />
+    <Compile Include="Messaging\Models\EmailMessageTemplate.cs" />
+    <Compile Include="Messaging\Models\EmailSubject.cs" />
+    <Compile Include="Messaging\Models\EmailTemplate.cs" />
+    <Compile Include="Messaging\Models\MessageRequest.cs" />
+    <Compile Include="Messaging\Models\MessageTemplate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\FuelBrandViewModel.cs" />
+    <Compile Include="ViewModels\GasStationOutputViewModel.cs" />
+    <Compile Include="ViewModels\GasStationInputViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\ExceptionLog\Created.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\ExceptionLog\Subjects.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\UserAccount\AccountClosed.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\UserAccount\AccountCreated.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\UserAccount\EmailChanged.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\UserAccount\EmailChangeRequested.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\UserAccount\EmailVerified.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\UserAccount\MobilePhoneChanged.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\UserAccount\MobilePhoneChangeRequested.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\UserAccount\PasswordChanged.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\UserAccount\PasswordResetRequested.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\UserAccount\Subjects.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\UserAccount\UsernameChanged.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Email\UserAccount\UsernameReminderRequested.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\PushNotification\UserAccount.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\Templates\Sms\UserAccount.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+﻿[
+    { "Key": "AccountCreated", "Template": "{{DisplayName}}, your {{ApplicationName}} account has been created. Your password is {{InitialPassword}}", "Sound": "newaccount", "Vibrate": true, "Silent": false, "Badge": 1 },
+    { "Key": "AccountClosed", "Template": "This message is to confirm that the account '{{Username}}' has been closed for {{ApplicationName}}", "Sound": "newaccount", "Vibrate": true, "Silent": false, "Badge" : 1 }
+]

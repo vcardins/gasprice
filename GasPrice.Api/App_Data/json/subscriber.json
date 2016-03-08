@@ -1,0 +1,20 @@
+[
+  {
+    "id": 106,
+    "created": "2016-02-28 21:54:07",
+    "updated": "2016-02-28 21:54:07",
+    "email": "vcardins@gmail.com",
+    "fullName": "Victor",
+    "company": "Momentum",
+    "active": true
+  },
+  {
+    "id": 377,
+    "created": "2016-02-29 00:27:04",
+    "updated": "2016-02-29 00:27:04",
+    "email": "robertakp@gmail.com",
+    "fullName": "Roberta Keller",
+    "company": "Much More",
+    "active": true
+  }
+]

@@ -1,0 +1,1004 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GasPrice.Api</name>
+    </assembly>
+    <members>
+        <member name="T:GasPrice.Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:GasPrice.Api.Startup.OAuthServerOptions">
+            <summary>
+            Gets the o authentication server options.
+            </summary>
+            <value>
+            The o authentication server options.
+            </value>
+        </member>
+        <member name="P:GasPrice.Api.Startup.OAuthBearerOptions">
+            <summary>
+            Gets the o authentication bearer options.
+            </summary>
+            <value>
+            The o authentication bearer options.
+            </value>
+        </member>
+        <member name="M:GasPrice.Api.Startup.ConfigOAuth(Owin.IAppBuilder)">
+            <summary>
+            Configurations the o authentication.
+            </summary>
+            <param name="app">The application.</param>
+        </member>
+        <member name="M:GasPrice.Api.Startup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            Configurations the specified application.
+            </summary>
+            <param name="app">The application.</param>
+        </member>
+        <member name="T:GasPrice.Api.Startup.FakeHttpContext">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:System.Web.HttpContextBase" />
+        </member>
+        <member name="M:GasPrice.Api.Startup.ConfigIoC(Owin.IAppBuilder)">
+            <summary>
+            Starts the application
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Startup.RegisterDependencies(Owin.IAppBuilder,SimpleInjector.Container)">
+            <summary>
+            Registers the dependencies.
+            </summary>
+            <param name="app">The application.</param>
+            <param name="container">The container.</param>
+        </member>
+        <member name="M:GasPrice.Api.Startup.RegisterAuth(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers the web API authentication.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="T:GasPrice.Api.Endpoints.CrudApiController`3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.CrudApiController`3.#ctor(GasPrice.Core.Data.UnitOfWork.IUnitOfWorkAsync)">
+            <summary>
+            </summary>
+            <param name="unitOfWork">The unit of work.</param>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.CrudApiController`3.GetFilter(System.Nullable{System.Int32})">
+            <summary>
+            Gets the filter.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.CrudApiController`3.GetOrderBy">
+            <summary>
+            Orders the by.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.CrudApiController`3.Get(System.Int32,System.Int32)">
+            <summary>
+            Gets the medias.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.CrudApiController`3.GetById(System.Int32)">
+            <summary>
+            Gets the by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.CrudApiController`3.Post(`2)">
+            <summary>
+            Posts the specified model.
+            </summary>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.CrudApiController`3.Put(System.Int32,`2)">
+            <summary>
+            Puts the specified model.
+            </summary>
+            <param name="id">The T identifier.</param>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.CrudApiController`3.Delete(System.Int32)">
+            <summary>
+            Deletes a T by its specified identifier.
+            </summary>
+            <param name="id">The T identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.CrudApiController`3.GetExport">
+            <summary>
+            Deletes a T by its specified identifier.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.CrudApiController`3.GetPublish">
+            <summary>
+            Deletes a T by its specified identifier.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.CrudApiController`3.BuildTree``1(System.Collections.Generic.IEnumerable{`0},System.String)">
+            <summary>
+            Builds the tree.
+            </summary>
+            <param name="items">The items.</param>
+            <param name="textProp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GasPrice.Api.Endpoints.BaseApiController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:GasPrice.Api.Endpoints.BaseApiController.Controller">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:GasPrice.Api.Endpoints.BaseApiController.CurrentUserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:GasPrice.Api.Endpoints.BaseApiController.Module">
+            <summary>
+            Gets the module.
+            </summary>
+            <value>
+            The module.
+            </value>
+        </member>
+        <member name="P:GasPrice.Api.Endpoints.BaseApiController.IsAdmin">
+            <summary>
+            Gets a value indicating whether this instance is admin.
+            </summary>
+            <value>
+              <c>true</c> if this instance is admin; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:GasPrice.Api.Endpoints.BaseApiController.CurrentUsername">
+            <summary>
+            Gets the current username.
+            </summary>
+            <value>
+            The current username.
+            </value>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.BaseApiController.AddHeader(System.String,System.Object)">
+            <summary>
+            Adds the header.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.BaseApiController.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Called when [action executing].
+            </summary>
+            <param name="actionContext">The action context.</param>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.BaseApiController.Ok(GasPrice.Core.Common.Enums.ModelAction,GasPrice.Core.Events.EventStatus,System.Object)">
+            <summary>
+            Oks the specified event action.
+            </summary>
+            <param name="eventAction">The event action.</param>
+            <param name="eventStatus">The event status.</param>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.BaseApiController.InvalidModel">
+            <summary>
+            Nots the found.
+            </summary>
+            <returns></returns>
+            <exception cref="T:GasPrice.Core.Filters.NotFoundException"></exception>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.BaseApiController.NotFound(System.String)">
+            <summary>
+            Nots the found.
+            </summary>
+            <param name="message">The message.</param>
+            <returns></returns>
+            <exception cref="T:GasPrice.Core.Filters.NotFoundException"></exception>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.BaseApiController.Forbidden(System.String)">
+            <summary>
+            Forbiddens the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.BaseApiController.NotFound(System.Int32)">
+            <summary>
+            Nots the found.
+            </summary>
+            <returns></returns>
+            <exception cref="T:GasPrice.Core.Filters.NotFoundException"></exception>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.BaseApiController.BadRequest(GasPrice.Core.Common.Enums.ModelAction)">
+            <summary>
+            Bads the request.
+            </summary>
+            <param name="eventAction">The event action.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GasPrice.Api.Endpoints.V1.Admin.AppSettingsController">
+            <summary>
+            
+            </summary>
+            <seealso cref="!:MessagingHub" />
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Admin.AppSettingsController.#ctor(GasPrice.Core.Services.IAppSettingsService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Endpoints.V1.Admin.AppSettingsController"/> class.
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Admin.AppSettingsController.Get">
+            <summary>
+            Gets the FAQs.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Admin.AppSettingsController.Post(GasPrice.Core.ViewModels.AppSettingsInput)">
+            <summary>
+            Posts the specified model.
+            </summary>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Admin.AppSettingsController.Put(GasPrice.Core.ViewModels.AppSettingsInput)">
+            <summary>
+            Puts the specified model.
+            </summary>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Admin.AppSettingsController.Patch(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Patches the specified identifier.
+            </summary>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GasPrice.Api.Endpoints.V1.Admin.UserController">
+            <summary>
+            
+            </summary>
+            <seealso cref="!:GasPrice.Api.Endpoints.BaseApiController&lt;GasPrice.Api.Hubs.MessagingHub&gt;" />
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Admin.UserController.#ctor(GasPrice.Core.Services.IUserService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Endpoints.V1.Admin.UserController"/> class.
+            </summary>
+            <param name="service">The service.</param>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Admin.UserController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Gets all.
+            </summary>
+            <param name="pageIndex">Index of the page.</param>
+            <param name="pageSize">Size of the page.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Admin.UserController.GetById(System.Int32)">
+            <summary>
+            Gets the by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Admin.UserController.GetByFirstName(System.String)">
+            <summary>
+            Gets the first name of the by.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GasPrice.Api.Endpoints.V1.ArticleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.ArticleController.#ctor(GasPrice.Core.Data.UnitOfWork.IUnitOfWorkAsync)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Endpoints.V1.ArticleController" /> class.
+            </summary>
+            <param name="unitOfWork">The unit of work.</param>
+        </member>
+        <member name="T:GasPrice.Api.Endpoints.V1.SubscriberController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.SubscriberController.#ctor(GasPrice.Core.Data.UnitOfWork.IUnitOfWorkAsync)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Endpoints.V1.SubscriberController" /> class.
+            </summary>
+            <param name="unitOfWork">The unit of work.</param>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.SubscriberController.Post">
+            <summary>
+            Posts the specified model.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.SubscriberController.PostSubscriber(GasPrice.Core.ViewModels.SubscriberViewModel)">
+            <summary>
+            Posts the specified model.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GasPrice.Api.Endpoints.V1.DocumentLibraryController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.DocumentLibraryController.#ctor(GasPrice.Core.Data.UnitOfWork.IUnitOfWorkAsync)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Endpoints.V1.DocumentLibraryController" /> class.
+            </summary>
+            <param name="unitOfWork">The unit of work.</param>
+        </member>
+        <member name="T:GasPrice.Api.Endpoints.V1.BannerController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.BannerController.#ctor(GasPrice.Core.Data.UnitOfWork.IUnitOfWorkAsync)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Endpoints.V1.BannerController" /> class.
+            </summary>
+            <param name="unitOfWork">The unit of work.</param>
+        </member>
+        <member name="T:GasPrice.Api.Endpoints.V1.MediaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.MediaController.#ctor(GasPrice.Core.Data.UnitOfWork.IUnitOfWorkAsync)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Endpoints.V1.MediaController" /> class.
+            </summary>
+            <param name="unitOfWork">The unit of work.</param>
+        </member>
+        <member name="T:GasPrice.Api.Endpoints.V1.RssFeedController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.RssFeedController.#ctor(GasPrice.Core.Data.UnitOfWork.IUnitOfWorkAsync)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Endpoints.V1.RssFeedController" /> class.
+            </summary>
+            <param name="unitOfWork">The unit of work.</param>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.RssFeedController.Get(System.Int32,System.Int32,System.String)">
+            <summary>
+            Gets the bookmarks.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.RssFeedController.GetById(System.Int32)">
+            <summary>
+            Gets the by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.RssFeedController.Post(GasPrice.Core.ViewModels.RssFeedModel)">
+            <summary>
+            Posts the specified model.
+            </summary>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.RssFeedController.Put(System.Int32,GasPrice.Core.ViewModels.RssFeedModel)">
+            <summary>
+            Puts the specified model.
+            </summary>
+            <param name="id">The RssFeed identifier.</param>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.RssFeedController.PatchEnable(System.Int32)">
+            <summary>
+            Patches the specified identifier.
+            </summary>
+            <param name="id">The Rss Feed identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.RssFeedController.PatchDisble(System.Int32)">
+            <summary>
+            Patches the specified identifier.
+            </summary>
+            <param name="id">The Rss Feed identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.RssFeedController.Delete(System.Int32)">
+            <summary>
+            Deletes a Rss Feed by its specified identifier.
+            </summary>
+            <param name="id">The RssFeed identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GasPrice.Api.Endpoints.V1.Profile.UserProfileController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Profile.UserProfileController.#ctor(GasPrice.Core.Services.IUserProfileService)">
+                    * @apiDefine UserAccount
+                    * @apiSuccess {Object} data User object
+                    * @apiSuccessExample Success-Response:
+                        {
+                            "data": {
+                                "firstname": "Victor",
+                                "lastname": "Cardins",
+                                "name": "Victor Cardins",
+                                "email": "victor@results.com",
+                                "mobilePhoneNumber": "6043665378",
+                                "password": "",
+                                "confirmPassword": "",
+                            }
+                        } 
+            @apiDefine UserNotFoundError
+            @apiError UserNotFound The id of the User was not found.
+            @apiErrorExample Error-Response:
+                HTTP/1.1 404 Not Found
+                {
+                  "error": "UserNotFound"
+                }
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Endpoints.V1.Profile.UserProfileController"/> class.
+            </summary>
+            <param name="userProfileService">The user profile service.</param>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Profile.UserProfileController.GetProfile">
+            <summary>
+            Gets the profile.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Profile.UserProfileController.PatchProfile(GasPrice.Core.ViewModels.UserProfile.UserProfileInfo)">
+            <summary>
+            Patches the profile.
+            </summary>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GasPrice.Api.Endpoints.V1.Account.UserAccountController">
+            <summary>
+            
+            </summary>
+            <seealso cref="!:GasPrice.Api.Endpoints.BaseApiController&lt;GasPrice.Api.Hubs.MessagingHub&gt;" />
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Account.UserAccountController.PatchChangePassword(GasPrice.Core.ViewModels.UserAccount.ChangePasswordInputModel)">
+                     * @api {post} /api/users Create New User
+                     * @apiName CreateUser
+                     * @apiGroup User
+                     * @apiDescription   Creates a new user record
+                     * @apiVersion 2.0.0
+                     * @apiParam {object} model User input model.
+                     * @apiParamExample {json} Request-Example:
+                     *       {
+                     *          UserPermissionsMap: null,
+                                address1: "1600D Beach Ave",
+                                address2: "Suite #1208",
+                                avatarUrl: "https://resultsprod.blob.core.windows.net/images-profile/user-301789-1d8235223d3f403fb3dc006c233ba0bc.jpg"
+                                city: "Vancouver",
+                                context: {},
+                                country_id: null,
+                                email: "victor@results.com",
+                                firstname: "Victor",
+                                id: 301789,
+                                lastname: "Cardins",
+                                member_of_business_unit_ids: null,
+                                name: "Victor Cardins",
+                                phone: "6043665378",
+                                photo_url: "https://resultsprod.blob.core.windows.net/images-profile/user-301789-1d8235223d3f403fb3dc006c233ba0bc.jpg"
+                                postalCode: "V6G1Y8",
+                                postalcode: "",
+                                preferences: {
+                                      defaultTimeZoneId: "Pacific Standard Time",
+                                      dateFormat: "mm/dd/yy", 
+                                      dailyEmailSummaryEnabled: true
+                                }
+                                roleId: 118093,
+                                role_id: 118093,
+                                role_name: null,
+                                state: "BC",
+                                notificationTypeId: 0,
+                                timezone_id: null,
+                                title: "Site Admin"
+                     *      } 
+                     * @apiSuccess {object} user User user
+                     * @apiSuccessExample Success-Response:
+                     *     HTTP/1.1 200 OK 
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Account.UserAccountController.PatchPasswordReset(GasPrice.Core.ViewModels.UserAccount.PasswordResetInputModel)">
+                     * @api {post} /api/users Create New User
+                     * @apiName CreateUser
+                     * @apiGroup User
+                     * @apiDescription   Creates a new user record
+                     * @apiVersion 2.0.0
+                     * @apiParam {object} model User input model.
+                     * @apiParamExample {json} Request-Example:
+                     *       {
+                     *          UserPermissionsMap: null,
+                                address1: "1600D Beach Ave",
+                                address2: "Suite #1208",
+                                avatarUrl: "https://resultsprod.blob.core.windows.net/images-profile/user-301789-1d8235223d3f403fb3dc006c233ba0bc.jpg"
+                                city: "Vancouver",
+                                context: {},
+                                country_id: null,
+                                email: "victor@results.com",
+                                firstname: "Victor",
+                                id: 301789,
+                                lastname: "Cardins",
+                                member_of_business_unit_ids: null,
+                                name: "Victor Cardins",
+                                phone: "6043665378",
+                                photo_url: "https://resultsprod.blob.core.windows.net/images-profile/user-301789-1d8235223d3f403fb3dc006c233ba0bc.jpg"
+                                postalCode: "V6G1Y8",
+                                postalcode: "",
+                                preferences: {
+                                      defaultTimeZoneId: "Pacific Standard Time",
+                                      dateFormat: "mm/dd/yy", 
+                                      dailyEmailSummaryEnabled: true
+                                }
+                                roleId: 118093,
+                                role_id: 118093,
+                                role_name: null,
+                                state: "BC",
+                                notificationTypeId: 0,
+                                timezone_id: null,
+                                title: "Site Admin"
+                     *      } 
+                     * @apiSuccess {object} user User user
+                     * @apiSuccessExample Success-Response:
+                     *     HTTP/1.1 200 OK 
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Account.UserAccountController.PostCloseAccount(System.String)">
+            <summary>
+            Posts the close account.
+            </summary>
+            <param name="confirm">if set to <c>true</c> [confirm].</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Account.UserAccountController.GetSignout">
+             @api {get} /api/users Get All 
+             @apiName GetAllUsers
+             @apiGroup User
+             @apiDescription      Retrieve a list of all users
+             @apiParam {string} include A list of children collections that must be returned along with the user profile
+             @apiParamExample {string} Request-Example:
+                   include=tasks,users 
+             @apiUse UserObject
+            
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Account.UserAccountController.PostChangeUsername(GasPrice.Core.ViewModels.UserAccount.ChangeUsernameInputModel)">
+                     * @api {post} /api/users Create New User
+                     * @apiName CreateUser
+                     * @apiGroup User
+                     * @apiDescription   Creates a new user record
+                     * @apiVersion 2.0.0
+                     * @apiParam {object} model User input model.
+                     * @apiParamExample {json} Request-Example:
+                     *       {
+                     *          UserPermissionsMap: null,
+                                address1: "1600D Beach Ave",
+                                address2: "Suite #1208",
+                                avatarUrl: "https://resultsprod.blob.core.windows.net/images-profile/user-301789-1d8235223d3f403fb3dc006c233ba0bc.jpg"
+                                city: "Vancouver",
+                                context: {},
+                                country_id: null,
+                                email: "victor@results.com",
+                                firstname: "Victor",
+                                id: 301789,
+                                lastname: "Cardins",
+                                member_of_business_unit_ids: null,
+                                name: "Victor Cardins",
+                                phone: "6043665378",
+                                photo_url: "https://resultsprod.blob.core.windows.net/images-profile/user-301789-1d8235223d3f403fb3dc006c233ba0bc.jpg"
+                                postalCode: "V6G1Y8",
+                                postalcode: "",
+                                preferences: {
+                                      defaultTimeZoneId: "Pacific Standard Time",
+                                      dateFormat: "mm/dd/yy", 
+                                      dailyEmailSummaryEnabled: true
+                                }
+                                roleId: 118093,
+                                role_id: 118093,
+                                role_name: null,
+                                state: "BC",
+                                notificationTypeId: 0,
+                                timezone_id: null,
+                                title: "Site Admin"
+                     *      } 
+                     * @apiSuccess {object} user User user
+                     * @apiSuccessExample Success-Response:
+                     *     HTTP/1.1 200 OK 
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Account.UserAccountController.Get(System.String)">
+            <summary>
+            Gets the specified includes.
+            </summary>
+            <param name="includes">The includes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Account.UserAccountController.GetIsUsernameAvailable(System.String)">
+            <summary>
+            Gets the is username available.
+            </summary>
+            <param name="username">The username.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Account.UserAccountController.GetIsEmailAvailable(System.String)">
+            <summary>
+            Gets the is email available.
+            </summary>
+            <param name="email">The email.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Account.UserAccountController.PostRegisterUser(GasPrice.Core.ViewModels.UserAccount.RegisterInputModel)">
+            <summary>
+            Posts the register user.
+            </summary>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Account.UserAccountController.GetVerifyEmail(System.String)">
+            <summary>
+            Posts the verify email.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Account.UserAccountController.PostCancelEmailVerification(System.String)">
+            <summary>
+            Posts the cancel email verification.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Endpoints.V1.Account.UserAccountController.#ctor(GasPrice.Core.Account.IUserAccountService,GasPrice.Core.Config.Information.IApplicationInformation)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Endpoints.V1.Account.UserAccountController"/> class.
+            </summary>
+            <param name="service">The service.</param>
+            <param name="appInfo">The application information.</param>
+        </member>
+        <member name="T:GasPrice.Api.Extensions.CustomAttributeExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Extensions.CustomAttributeExtension.TryGetAttribute``1(System.Reflection.MemberInfo,``0@)">
+            <summary>
+            Tries the get attribute.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="memberInfo">The member information.</param>
+            <param name="customAttribute">The custom attribute.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GasPrice.Api.Extensions.DependencyContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:GasPrice.Api.Extensions.DependencyContext.ServiceType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:GasPrice.Api.Extensions.DependencyContext.ImplementationType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:GasPrice.Api.Extensions.ContextDependentExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Extensions.ContextDependentExtensions.RegisterWithContext``1(SimpleInjector.Container,System.Func{GasPrice.Api.Extensions.DependencyContext,``0})">
+            <summary>
+            
+            </summary>
+            <param name="container"></param>
+            <param name="contextBasedFactory"></param>
+            <typeparam name="TService"></typeparam>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:GasPrice.Api.Extensions.HttpContextExtensions">
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Extensions.HttpContextExtensions.IsMobile(System.Web.HttpRequest)">
+            <summary>
+            Determines whether the specified context request is mobile.
+            </summary>
+            <param name="request">The request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Extensions.HttpContextExtensions.BrowserCapabilities(System.Web.HttpRequest)">
+            <summary>
+            Browsers the capabilities.
+            </summary>
+            <param name="request">The request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GasPrice.Api.Extensions.HttpContextExtensions.GetApplicationUrl(System.Web.HttpContext)">
+            <summary>
+            Gets the application URL.
+            </summary>
+            <param name="ctx">The CTX.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">ctx</exception>
+        </member>
+        <member name="M:GasPrice.Api.Extensions.HttpContextExtensions.GetApplicationUrl(System.Web.HttpContextBase)">
+            <summary>
+            
+            </summary>
+            <param name="ctx"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:GasPrice.Api.Extensions.HttpContextExtensions.GetApplicationUrl(System.Web.HttpRequestBase)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:GasPrice.Api.Extensions.NotFoundWithMessageResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Extensions.NotFoundWithMessageResult.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:GasPrice.Api.Extensions.ForbiddenWithMessageResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Extensions.ForbiddenWithMessageResult.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:GasPrice.Api.Extensions.UserAccountExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:GasPrice.Api.Filters.ClaimsAuthorizeAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Filters.ClaimsAuthorizeAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Filters.ClaimsAuthorizeAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Filters.ClaimsAuthorizeAttribute.#ctor(System.String,System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Filters.ClaimsAuthorizeAttribute"/> class.
+            </summary>
+            <param name="action">The action.</param>
+            <param name="resources">The resources.</param>
+        </member>
+        <member name="M:GasPrice.Api.Filters.ClaimsAuthorizeAttribute.CheckAccess(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Checks the access.
+            </summary>
+            <param name="actionContext">The action context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GasPrice.Api.Filters.ClaimsDeauthorizeAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Filters.ClaimsDeauthorizeAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Filters.ClaimsAuthorizeAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Filters.ClaimsDeauthorizeAttribute.#ctor(System.String,System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Filters.ClaimsAuthorizeAttribute"/> class.
+            </summary>
+            <param name="action">The action.</param>
+            <param name="resources">The resources.</param>
+        </member>
+        <member name="T:GasPrice.Api.Filters.LogAttribute">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:System.Web.Http.Filters.ActionFilterAttribute" />
+        </member>
+        <member name="P:GasPrice.Api.Filters.LogAttribute.Action">
+            <summary>
+            Action being executed
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:GasPrice.Api.Filters.LogAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Filters.LogAttribute"/> class.
+            </summary>
+        </member>
+        <member name="T:GasPrice.Api.Filters.ExceptionAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Filters.ExceptionAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Filters.ExceptionAttribute"/> class.
+            </summary>
+        </member>
+        <member name="P:GasPrice.Api.Filters.ExceptionAttribute.Mappings">
+            <summary>
+            Gets the mappings.
+            </summary>
+            <value>
+            The mappings.
+            </value>
+        </member>
+        <member name="T:GasPrice.Api.Filters.ModelStateValidatorAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:GasPrice.Api.IoC.SimpleInjectorWebApiDependencyResolver">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:System.Web.Http.Dependencies.IDependencyResolver" />
+        </member>
+        <member name="M:GasPrice.Api.IoC.SimpleInjectorWebApiDependencyResolver.#ctor(SimpleInjector.Container)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.IoC.SimpleInjectorWebApiDependencyResolver"/> class.
+            </summary>
+            <param name="container">The container.</param>
+        </member>
+        <member name="M:GasPrice.Api.IoC.SimpleInjectorWebApiDependencyResolver.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:GasPrice.Api.Helpers.ArrayInputAttribute">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:System.Web.Http.Filters.ActionFilterAttribute" />
+        </member>
+        <member name="T:GasPrice.Api.Helpers.ModelStateHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Helpers.ModelStateHelper.Errors(System.Web.Http.ModelBinding.ModelStateDictionary)">
+            <summary>
+            
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GasPrice.Api.Helpers.PropertyHelper`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:GasPrice.Api.Helpers.PropertyHelper`1.GetProperty``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Gets the property.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="selector">The selector.</param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="T:GasPrice.Api.Providers.ApplicationOAuthProvider">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:Microsoft.Owin.Security.OAuth.OAuthAuthorizationServerProvider" />
+        </member>
+        <member name="M:GasPrice.Api.Providers.ApplicationOAuthProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Providers.ApplicationOAuthProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Providers.ApplicationOAuthProvider.ValidateClientRedirectUri(Microsoft.Owin.Security.OAuth.OAuthValidateClientRedirectUriContext)">
+            <summary>
+            Valildate the redirect uri
+            </summary>
+            <param name="context">Validate context</param>
+            <returns>Task</returns>		
+        </member>
+        <member name="M:GasPrice.Api.Providers.ApplicationOAuthProvider.ValidateClientAuthentication(Microsoft.Owin.Security.OAuth.OAuthValidateClientAuthenticationContext)">
+            <summary>
+            Password resource owner credentials don´t provide a client identifier
+            </summary>
+            <param name="context">Validate context</param>
+            <returns>Task</returns>		
+        </member>
+        <member name="M:GasPrice.Api.Providers.ApplicationOAuthProvider.CreateProperties(System.String,System.String,GasPrice.Core.Account.AccessRole)">
+            <summary>
+            Creates the properties.
+            </summary>
+            <param name="clientId">The client identifier.</param>
+            <param name="userName">Name of the user.</param>
+            <param name="role">The role.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GasPrice.Api.Providers.IAppBuilderExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GasPrice.Api.Providers.IAppBuilderExtension.UseOAuthBearerTokens(Owin.IAppBuilder,Microsoft.Owin.Security.OAuth.OAuthAuthorizationServerOptions,System.String)">
+            <summary>
+            Uses the o authentication bearer tokens.
+            </summary>
+            <param name="app">The application.</param>
+            <param name="options">The options.</param>
+            <param name="externalAuthenticationType">Type of the external authentication.</param>
+        </member>
+        <member name="T:GasPrice.Api.Providers.OAuthBearerTokenProvider">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:Microsoft.Owin.Security.OAuth.OAuthBearerAuthenticationProvider" />
+        </member>
+        <member name="M:GasPrice.Api.Providers.OAuthBearerTokenProvider.#ctor(System.Func{Microsoft.Owin.IOwinRequest,System.String}[])">
+            <summary>
+            By Default the Token will be searched for on the "Authorization" header.
+            <para> pass additional getters that might return a token string</para>
+            </summary>
+            <param name="locations"></param>
+        </member>
+        <member name="T:GasPrice.Api.Timers.BackgroundTime">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:System.Web.Hosting.IRegisteredObject" />
+        </member>
+        <member name="M:GasPrice.Api.Timers.BackgroundTime.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GasPrice.Api.Timers.BackgroundTime"/> class.
+            </summary>
+        </member>
+    </members>
+</doc>

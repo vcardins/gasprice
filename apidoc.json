@@ -1,0 +1,15 @@
+{
+  "name": "Results.com for Developers",
+  "version": "2.0.0",
+  "description": "Results.com Business Execution Software REST API",
+  "title": "Results.com Developer API",
+  "url" : "https://api.results.com/api/v2",
+   "header": {
+    "title": "Overview",
+    "filename": "header.md"
+  },
+   "footer": {
+    "title": "",
+    "filename": "footer.md"
+  }
+}

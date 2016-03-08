@@ -1,0 +1,256 @@
+﻿[
+  {
+    "author": null,
+    "revisor": null,
+    "medias": [
+      {
+        "mediaId": 21,
+        "extension": "jpg",
+        "title": "Política Integrada",
+        "description": "Política Integrada",
+        "filename": "politicaIntegradaGasPrice.jpg",
+        "filepath": "files/pics",
+        "isHidden": false,
+        "sortOrder": 1,
+        "imageGalleryId": 1,
+        "documentLibraryId": null,
+        "id": 21,
+        "created": null,
+        "updated": new Date(
+          1375937519347
+        )
+      },
+      {
+        "mediaId": 46,
+        "extension": "jpg",
+        "title": null,
+        "description": null,
+        "filename": "wallpaper_of_natural_scenery_two_girls_standing_in_the_field.jpg",
+        "filepath": "Files/pics/slider/",
+        "isHidden": false,
+        "sortOrder": 0,
+        "imageGalleryId": 1,
+        "documentLibraryId": null,
+        "id": 46,
+        "created": new Date(
+          1375942538500
+        ),
+        "updated": new Date(
+          1375942538500
+        )
+      },
+      {
+        "mediaId": 52,
+        "extension": "jpg",
+        "title": null,
+        "description": null,
+        "filename": "zoom-14248800-1.jpg",
+        "filepath": "Files/pics/slider/",
+        "isHidden": false,
+        "sortOrder": 0,
+        "imageGalleryId": 1,
+        "documentLibraryId": null,
+        "id": 52,
+        "created": new Date(
+          1375942703497
+        ),
+        "updated": new Date(
+          1375942703497
+        )
+      },
+      {
+        "mediaId": 53,
+        "extension": "jpg",
+        "title": null,
+        "description": null,
+        "filename": "zoom-18458464-1.jpg",
+        "filepath": "Files/pics/slider/",
+        "isHidden": false,
+        "sortOrder": 0,
+        "imageGalleryId": 1,
+        "documentLibraryId": null,
+        "id": 53,
+        "created": new Date(
+          1375942703513
+        ),
+        "updated": new Date(
+          1375942703513
+        )
+      },
+      {
+        "mediaId": 54,
+        "extension": "jpg",
+        "title": null,
+        "description": null,
+        "filename": "zoom-19380141-1.jpg",
+        "filepath": "Files/pics/slider/",
+        "isHidden": false,
+        "sortOrder": 0,
+        "imageGalleryId": 1,
+        "documentLibraryId": null,
+        "id": 54,
+        "created": new Date(
+          1375942703527
+        ),
+        "updated": new Date(
+          1375942703527
+        )
+      },
+      {
+        "mediaId": 55,
+        "extension": "jpg",
+        "title": null,
+        "description": null,
+        "filename": "zoom-20106286-1.jpg",
+        "filepath": "Files/pics/slider/",
+        "isHidden": false,
+        "sortOrder": 0,
+        "imageGalleryId": 1,
+        "documentLibraryId": null,
+        "id": 55,
+        "created": new Date(
+          1375942703540
+        ),
+        "updated": new Date(
+          1375942703540
+        )
+      }
+    ],
+    "imageGalleryId": 1,
+    "pageId": null,
+    "articleId": null,
+    "title": "Evento Segurança",
+    "description": null,
+    "showTitle": false,
+    "rows": 1,
+    "columns": 0,
+    "thumbnailWidth": null,
+    "thumbnailHeight": null,
+    "published": false,
+    "createdBy": null,
+    "updatedBy": null,
+    "id": 1,
+    "created": new Date(
+      1375922152220
+    ),
+    "updated": new Date(
+      1375922152220
+    )
+  },
+  {
+    "author": null,
+    "revisor": null,
+    "medias": [
+      {
+        "mediaId": 56,
+        "extension": "jpg",
+        "title": "Responsabilidade Social",
+		"subtitle": "A política que nos move",	
+        "description": null,
+        "filename": "01.jpg",
+        "filepath": "Files/slider/",
+        "isHidden": false,
+        "sortOrder": 1,
+        "imageGalleryId": 3,
+        "documentLibraryId": null,
+        "id": 56,
+        "created": null,
+        "updated": new Date(
+          1376257885963
+        )
+      },
+      {
+        "mediaId": 57,
+        "extension": "jpg",
+        "title": "Padrão de Qualidade",
+		"subtitle": "Classe Mundial",		
+        "description": null,
+        "filename": "02.jpg",
+        "filepath": "Files/slider/",
+        "isHidden": false,
+        "sortOrder": 3,
+        "imageGalleryId": 3,
+        "documentLibraryId": null,
+        "id": 57,
+        "created": null,
+        "updated": new Date(
+          1376257998647
+        )
+      },
+      {
+        "mediaId": 58,
+        "extension": "jpg",
+        "title": "Sustentabilidade",
+		"subtitle": "Gerar resultados e promover o desenvolvimento",
+        "description": null,
+        "filename": "03.jpg",
+        "filepath": "Files/slider/",
+        "isHidden": false,
+        "sortOrder": 7,
+        "imageGalleryId": 3,
+        "documentLibraryId": null,
+        "id": 58,
+        "created": null,
+        "updated": new Date(
+          1376258058090
+        )
+      },
+      {
+        "mediaId": 61,
+        "extension": "jpg",
+        "title": "Segurança",
+		"subtitle": "O cuidado com as pessoas",
+        "description": null,
+        "filename": "04.jpg",
+        "filepath": "Files/slider/",
+        "isHidden": false,
+        "sortOrder": 5,
+        "imageGalleryId": 3,
+        "documentLibraryId": null,
+        "id": 61,
+        "created": null,
+        "updated": new Date(
+          1376258032030
+        )
+      },
+      {
+        "mediaId": 62,
+        "extension": "jpg",
+        "title": "Confiança e Satisfação",
+		"subtitle": "Consequência do que fazemos",
+        "description": null,
+        "filename": "05.jpg",
+        "filepath": "Files/slider/",
+        "isHidden": false,
+        "sortOrder": 4,
+        "imageGalleryId": 3,
+        "documentLibraryId": null,
+        "id": 62,
+        "created": null,
+        "updated": new Date(
+          1376258015580
+        )
+      }
+    ],
+    "imageGalleryId": 3,
+    "pageId": null,
+    "articleId": null,
+    "title": "Slider",
+    "description": null,
+    "showTitle": false,
+    "rows": 4,
+    "columns": 0,
+    "thumbnailWidth": null,
+    "thumbnailHeight": null,
+    "published": false,
+    "createdBy": null,
+    "updatedBy": null,
+    "id": 3,
+    "created": new Date(
+      1376248147247
+    ),
+    "updated": new Date(
+      1376248147247
+    )
+  }
+]

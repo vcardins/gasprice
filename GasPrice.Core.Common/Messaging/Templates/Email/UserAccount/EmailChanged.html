@@ -1,0 +1,33 @@
+﻿<!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
+<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" width="550">
+    <tr>
+        <td valign="top">
+            <table cellpadding="0" cellspacing="0" border="0" align="center" class="ta-container">
+                <tr>
+                    <td height="102" valign="top" class="ta-header" style="padding :10px">
+                        <img style="float: right" src="http://www.deten.com.br/favicon-96x96.png" alt="Immi Planner" title="Immi Planner"" />
+                        <div class="ta-header-text">Username Changed</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="550" valign="top" class="ta-content">
+                        <p>This email is to confirm that your email has been changed for your account with  {{ApplicationName}}.</p>
+                        <p>
+                            Username: {{Username}}<br/>
+                            Email: {{Email}}<br/>
+                            It will be helpful for you to confirm this new email address by following this link:
+                            {{ConfirmChangeEmailUrl}}
+                        </p>
+                        <p>Thanks!</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="550" valign="top" class="ta-footer">
+                        <p>{{EmailSignature}}</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- End of wrapper table -->

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2118EFA6-46BE-4D2D-8D32-508DB8760CA4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GasPrice.Core</RootNamespace>
+    <AssemblyName>GasPrice.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Omu.ValueInjecter, Version=3.1.1.0, Culture=neutral, PublicKeyToken=c7694541b0ac80e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\valueinjecter.3.1.1.2\lib\net40\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\IBaseElementSettings.cs" />
+    <Compile Include="Config\OAuth\IOAuthSettings.cs" />
+    <Compile Include="Config\OAuth\IOAuthProviderCollection.cs" />
+    <Compile Include="Config\OAuth\IOAuthProviderSettings.cs" />
+    <Compile Include="Account\Enum\ApplicationTypes.cs" />
+    <Compile Include="Account\Audience.cs" />
+    <Compile Include="Constants\UserAccountConstants.cs" />
+    <Compile Include="Data\Infrastructure\SortParams.cs" />
+    <Compile Include="Data\Infrastructure\KeyedObject.cs" />
+    <Compile Include="Account\AccountManagementStatus.cs" />
+    <Compile Include="EventHandling\CommandBus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EventHandling\Commands.cs" />
+    <Compile Include="EventHandling\EventBus.cs" />
+    <Compile Include="EventHandling\Events.cs" />
+    <Compile Include="EventHandling\EventsHandler.cs" />
+    <Compile Include="EventHandling\GenericMethodActionBuilder.cs" />
+    <Compile Include="EventHandling\IAllowMultiple.cs" />
+    <Compile Include="EventHandling\ICommand.cs" />
+    <Compile Include="EventHandling\ICommandHandler.cs" />
+    <Compile Include="EventHandling\IEvent.cs" />
+    <Compile Include="EventHandling\IEventBus.cs" />
+    <Compile Include="EventHandling\IEventHandler.cs" />
+    <Compile Include="EventHandling\IEventSource.cs" />
+    <Compile Include="Filters\ModuleAttribute.cs" />
+    <Compile Include="Filters\JsonIgnoreAttribute.cs" />
+    <Compile Include="Filters\BooleanRequiredAttribute.cs" />
+    <Compile Include="Filters\ForbiddenException.cs" />
+    <Compile Include="Filters\CustomValidationException.cs" />
+    <Compile Include="Data\Infrastructure\FilterParams.cs" />
+    <Compile Include="Models\Admin\Role.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Modules\FuelPriceHistory.cs" />
+    <Compile Include="Models\Modules\FuelServiceGasStation.cs" />
+    <Compile Include="Services\IPriceHistoryService.cs" />
+    <Compile Include="ViewModels\Admin\ModuleConfig.cs" />
+    <Compile Include="ViewModels\Admin\ActionViewModel.cs" />
+    <Compile Include="ViewModels\Admin\ModuleViewModel.cs" />
+    <Compile Include="ViewModels\Admin\PermissionViewModel.cs" />
+    <Compile Include="ViewModels\Admin\RoleViewModel.cs" />
+    <Compile Include="ViewModels\Admin\RolePermissionViewModel.cs" />
+    <Compile Include="ViewModels\Admin\UserRoleViewModel.cs" />
+    <Compile Include="ViewModels\ModulePermissions.cs" />
+    <Compile Include="Models\Admin\UserRole.cs" />
+    <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\EntityAuditLog.cs" />
+    <Compile Include="Models\Infraestructure\Log.cs" />
+    <Compile Include="Models\Modules\GasStation.cs" />
+    <Compile Include="Models\Modules\FuelBrand.cs" />
+    <Compile Include="Models\Modules\DynamicProperty.cs" />
+    <Compile Include="Models\Modules\FuelService.cs" />
+    <Compile Include="Models\AppSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\BaseObjectState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Infraestructure\ExceptionLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\IAppSettingsService.cs" />
+    <Compile Include="Services\ILookupService.cs" />
+    <Compile Include="ViewModels\AppSettingsInput.cs" />
+    <Compile Include="ViewModels\AppSettingsOutput.cs" />
+    <Compile Include="ViewModels\EnumOutput.cs" />
+    <Compile Include="ViewModels\UserKeys.cs" />
+    <Compile Include="ViewModels\FileResult.cs" />
+    <Compile Include="ViewModels\UserProfile\UserMiniProfile.cs" />
+    <Compile Include="ViewModels\Lookups.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Person.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\EventAction.cs" />
+    <Compile Include="Filters\AutoPopulateAttribute.cs" />
+    <Compile Include="Filters\NotFoundException.cs" />
+    <Compile Include="Filters\StringHelper.cs" />
+    <Compile Include="Filters\NotInjectedAttribute.cs" />
+    <Compile Include="Services\IUserProfileService.cs" />
+    <Compile Include="Services\IUserService.cs" />
+    <Compile Include="Account\UserAccountAuthentication.cs" />
+    <Compile Include="ViewModels\UserProfile\UserProfileInfo.cs" />
+    <Compile Include="ViewModels\UserAccount\UserProfileOutput.cs" />
+    <Compile Include="Account\Enum\UserRoles.cs" />
+    <Compile Include="Account\Enum\UserAccountActionMessages.cs" />
+    <Compile Include="Account\Enum\AccountVerificationStatus.cs" />
+    <Compile Include="Account\Configuration\ApplicationInformation.cs" />
+    <Compile Include="Account\Configuration\MembershipRebootConfiguration.cs" />
+    <Compile Include="Account\Configuration\RelativePathApplicationInformation.cs" />
+    <Compile Include="Account\Events\DebuggerEventHandler.cs" />
+    <Compile Include="Account\Events\UserAccountCommands.cs" />
+    <Compile Include="Account\Events\UserAccountEvents.cs" />
+    <Compile Include="Account\Query\GroupQueryResult.cs" />
+    <Compile Include="Account\Query\IGroupQuery.cs" />
+    <Compile Include="Account\Query\IUserAccountQuery.cs" />
+    <Compile Include="Account\Query\IUserAccountQuery`1.cs" />
+    <Compile Include="Account\Query\UserAccountQueryResult.cs" />
+    <Compile Include="Account\Repository\IUserAccountRepository.cs" />
+    <Compile Include="Account\AccessRole.cs" />
+    <Compile Include="Account\UserKey.cs" />
+    <Compile Include="Account\Validation\AggregateValidator.cs" />
+    <Compile Include="Account\Validation\DelegateValidator.cs" />
+    <Compile Include="Account\Validation\IValidator.cs" />
+    <Compile Include="Account\Validation\PasswordComplexityValidator.cs" />
+    <Compile Include="Common\ApplicationInformation.cs" />
+    <Compile Include="Common\PackedList.cs" />
+    <Compile Include="Common\TypeSwitch.cs" />
+    <Compile Include="Common\Validation\ValidationContainer.cs" />
+    <Compile Include="Common\Validation\ValidationEngine.cs" />
+    <Compile Include="Config\Messaging\IMailerSettings.cs" />
+    <Compile Include="Config\Messaging\IMessagingServiceSettings.cs" />
+    <Compile Include="Config\Messaging\ISendGridMailerCollection.cs" />
+    <Compile Include="Config\Messaging\ISendGridMailerSettings.cs" />
+    <Compile Include="Config\Security\IPasswordPolicy.cs" />
+    <Compile Include="Config\Security\ISecuritySettings.cs" />
+    <Compile Include="Constants\CryptoConstants.cs" />
+    <Compile Include="Data\DataContext\IDataContext.cs" />
+    <Compile Include="Data\DataContext\IDataContextAsync.cs" />
+    <Compile Include="Data\Infrastructure\IObjectState.cs" />
+    <Compile Include="Data\Infrastructure\ObjectState.cs" />
+    <Compile Include="Data\Repositories\IQueryFluent.cs" />
+    <Compile Include="Data\Repositories\IQueryObject.cs" />
+    <Compile Include="Data\Repositories\IRepository.cs" />
+    <Compile Include="Data\Repositories\IRepositoryAsync.cs" />
+    <Compile Include="Data\UnitOfWork\DbIsolationLevel.cs" />
+    <Compile Include="Data\UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="Data\UnitOfWork\IUnitOfWorkAsync.cs" />
+    <Compile Include="Account\UserAccount.cs" />
+    <Compile Include="Account\UserClaim.cs" />
+    <Compile Include="Account\Enum\VerificationKeyPurpose.cs" />
+    <Compile Include="Events\BaseEvent.cs" />
+    <Compile Include="Events\ExceptionLogEvents.cs" />
+    <Compile Include="Common\ListExtensions.cs" />
+    <Compile Include="Common\PaginatedList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\QueryableExtensions.cs" />
+    <Compile Include="Account\IAuthenticationService.cs" />
+    <Compile Include="Services\IExceptionLogService.cs" />
+    <Compile Include="Services\IService.cs" />
+    <Compile Include="Account\IUserAccountService.cs" />
+    <Compile Include="Common\Validation\IValidationContainer.cs" />
+    <Compile Include="ViewModels\UserAccount\AuthenticatedAccount.cs" />
+    <Compile Include="ViewModels\UserAccount\ChangeEmailFromKeyInputModel.cs" />
+    <Compile Include="ViewModels\UserAccount\ChangeEmailRequestInputModel.cs" />
+    <Compile Include="ViewModels\UserAccount\ChangePasswordFromResetKeyInputModel.cs" />
+    <Compile Include="ViewModels\UserAccount\ChangePasswordInputModel.cs" />
+    <Compile Include="ViewModels\UserAccount\ChangeUsernameInputModel.cs" />
+    <Compile Include="ViewModels\UserAccount\LoginInputModel.cs" />
+    <Compile Include="ViewModels\UserAccount\PasswordResetInputModel.cs" />
+    <Compile Include="ViewModels\UserAccount\RegisterInputModel.cs" />
+    <Compile Include="ViewModels\UserAccount\SendUsernameReminderInputModel.cs" />
+    <Compile Include="ViewModels\UserInput.cs" />
+    <Compile Include="ViewModels\UserNameInfo.cs" />
+    <Compile Include="ViewModels\UserOutput.cs" />
+    <Compile Include="ViewModels\UserProfile\UserBasicProfile.cs" />
+    <Compile Include="ViewModels\UserSettingsOutput.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GasPrice.Core.Common\GasPrice.Core.Common.csproj">
+      <Project>{84d2675e-8f99-4301-976f-560c64d714be}</Project>
+      <Name>GasPrice.Core.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

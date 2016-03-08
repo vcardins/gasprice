@@ -1,0 +1,42 @@
+﻿[
+  {
+    "id": 6,
+    "title": "Responsabilidade Social",
+    "filePath": "Files/slider/01.jpg",
+    "subTitle": "A política que nos move",
+    "datePublished": "2014-01-20 02:43:26",
+    "sortOrder": 1
+  },
+  {
+    "id": 7,
+    "title": "Padrão de Qualidade",
+    "filePath": "Files/slider/02.jpg",
+    "subTitle": "Classe Mundial",
+    "datePublished": "2014-01-20 02:43:26",
+    "sortOrder": 2
+  },
+  {
+    "id": 8,
+    "title": "Sustentabilidade",
+    "filePath": "Files/slider/03.jpg",
+    "subTitle": "Gerar resultados e promover o desenvolvimento",
+    "datePublished": "2014-01-20 02:43:26",
+    "sortOrder": 3
+  },
+  {
+    "id": 9,
+    "title": "Segurança",
+    "filePath": "Files/slider/04.jpg",
+    "subTitle": "O cuidado com as pessoas",
+    "datePublished": "2014-01-20 02:43:26",
+    "sortOrder": 4
+  },
+  {
+    "id": 10,
+    "title": "Confiança e Satisfação",
+    "filePath": "Files/slider/05.jpg",
+    "subTitle": "Consequência do que fazemos",
+    "datePublished": "2014-01-20 02:43:26",
+    "sortOrder": 5
+  }
+]

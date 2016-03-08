@@ -1,0 +1,20 @@
+﻿[
+  {
+    "id": 1,
+    "name": "Sugestão",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "id": 2,
+    "name": "Elogio",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "id": 3,
+    "name": "Crítica",
+    "sortOrder": 3,
+    "active": true
+  }
+]

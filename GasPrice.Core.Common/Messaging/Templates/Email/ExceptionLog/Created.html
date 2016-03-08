@@ -1,0 +1,30 @@
+﻿<!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
+<table cellpadding="0" cellspacing="0" border="0" width="700">
+    <tr>
+        <td valign="top">
+            <table cellpadding="0" cellspacing="0" border="0" align="center">
+                <tr>
+                    <td valign="top" class="ta-header" style="padding :10px">
+                        <img src="http://www.dienerlaw.net/wp-content/uploads/2015/10/checklist.png" alt="App" title="App" width="72" height="72" style="display: inline-block;margin-right:20px" />
+                        <h1 style="display: inline-block">
+                            {{ApplicationName}}
+                        </h1>                       
+                    </td>
+                </tr>
+                <tr>
+                    <td width="700">
+                        <h3 style="color: red">{{Error}}</h3>
+                        <p style="color:blue">{{Uri}}</p>
+                        <pre>{{StackTrace}}</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="700">
+                        <p>{{EmailSignature}}</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- End of wrapper table -->

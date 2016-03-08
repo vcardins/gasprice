@@ -1,0 +1,34 @@
+﻿[
+  {
+    "hostServerId": 1,
+    "accountName": "Momentum Dev",
+    "host": "ftp.e-momentum.com.br",
+    "port": 21,
+    "username": "developer",
+    "password": "d3v3l0p3r",
+    "path": "deten",
+    "comment": null,
+    "active": true,
+    "id": 1,
+    "created": null,
+    "updated": new Date(
+      1377571406707
+    )
+  },
+  {
+    "hostServerId": 4,
+    "accountName": "Vcardins",
+    "host": "Novo Registro",
+    "port": 21,
+    "username": "vcardins",
+    "password": "vcardins",
+    "path": "/",
+    "comment": null,
+    "active": true,
+    "id": 4,
+    "created": null,
+    "updated": new Date(
+      1377572661440
+    )
+  }
+]
