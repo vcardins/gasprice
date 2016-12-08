@@ -2,4 +2,4 @@
 License
 ----
 
-All rights reserved to Results.com - 2014
+All rights reserved - 2016

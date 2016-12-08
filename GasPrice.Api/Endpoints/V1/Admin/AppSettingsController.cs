@@ -16,6 +16,7 @@ namespace GasPrice.Api.Endpoints.V1.Admin
     /// </summary>
     /// <seealso cref="MessagingHub" />
     [RoutePrefix("api/admin/settings")]
+    [ClaimsAuthorize("Roles", "Admin")]
     public class AppSettingsController : BaseApiController
     {
         private readonly IAppSettingsService _appSettingsService;

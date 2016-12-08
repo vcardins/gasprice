@@ -1,9 +1,9 @@
 {
-  "name": "Results.com for Developers",
-  "version": "2.0.0",
-  "description": "Results.com Business Execution Software REST API",
+  "name": "GasPrice",
+  "version": "1.0.0",
+  "description": "REST API",
   "title": "Results.com Developer API",
-  "url" : "https://api.results.com/api/v2",
+  "url" : "",
    "header": {
     "title": "Overview",
     "filename": "header.md"
